@@ -5,6 +5,7 @@ import {Grid, Row, Col} from 'react-flexbox-grid';
 import getUrlCountries from './services/getUrlCountries';
 import getContinentList from './services/getContinentsList'
 import Continent from "./components/Continents/Continent";
+import ProgressBar from "./components/ProgressBar"
 
 class App extends Component {
 
@@ -37,10 +38,10 @@ class App extends Component {
     const { data, continents } = this.state;
       return(
         <div className="App">
-          <Header></Header>
+          <Header data = {data}></Header>
           <Grid>
             <Row>
-              {continents ? continents.map((continent, index) => <Col xs={12} sm={2.4}><Continent continent = {continent} data = {data}/></Col>) : <span>Bye</span>}
+              {continents ? continents.map((continent, index) => <Col xs={12} sm={2.4}><Continent continent = {continent} data = {data}/></Col>) : <ProgressBar color="black" colorBar="grey"></ProgressBar>}
             </Row>
           </Grid>
         </div>

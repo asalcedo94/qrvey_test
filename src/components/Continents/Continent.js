@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Countries from './Country/Countries';
+import './style.css'
 
 class Continent extends Component { 
 
@@ -15,7 +16,7 @@ class Continent extends Component {
         const { continent, data } = this.state;
         return(
             <div className="Continent">
-                <span>{continent}</span>
+                <h2>{continent}</h2>
                 <Countries continent = {continent} data={data}></Countries>
             </div>
             

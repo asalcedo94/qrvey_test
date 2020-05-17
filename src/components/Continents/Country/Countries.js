@@ -9,7 +9,8 @@ const Countries = ( {continent, data} ) => {
     };
 
     return(
-    <div className="Countries">{strToComponents(data)}</div>   
-)}
+        <div className="Countries">{strToComponents(data)}</div>   
+    )
+}
 
 export default Countries

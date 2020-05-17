@@ -1,12 +1,10 @@
-
-
-export default function filterEmoji(searchText, maxResults) {
-    return emojiList
-        .filter(emoji => {
-            if (emoji.title.toLowerCase().includes(searchText.toLowerCase())) {
+export default function filterCountries(searchText, maxResults) {
+    return []
+        .filter(country => {
+            if (country.title.toLowerCase().includes(searchText.toLowerCase())) {
                 return true;
             }
-            if (emoji.keywords.includes(searchText)) {
+            if (country.keywords.includes(searchText)) {
                 return true;
             }
             return false;
